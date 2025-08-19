@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+double mean(int arr[],int n)
+{
+    if(n==1)
+        return arr[0]; //if array consists of only one element
+    return(mean(arr,n-1)*(n-1)+arr[n-1])/n; //make first mean of n
+    //then make mean of arr[n-1]
+    //them make mean of n in terms of n-1 so to break down step as recursion .
+    
+}
+int main()
+{
+    int arr[]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<"mean of array  is "<<mean(arr,n)<<endl;
+    return 0;
+}
