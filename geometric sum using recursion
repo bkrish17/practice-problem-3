@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+double geometricsum(int n,double a,double r)
+{
+    if(n==1)
+        return a;
+    return geometricsum(n-1,a,r)+a*pow(r,n-1);  //sn=s(n-1)+ar^(n-1)
+}
+int main()
+{
+    double a,r;
+    int n;
+    cout<<"enter first term a";
+    cin>>a;
+    cout<<"enter common ratio ";
+    cin>>r;
+    cout<<"enter number of terms ";
+    cin>>n;
+    double result=geometricsum(n,a,r);
+    cout<<"geometric sum of "<<n<<"terms = "<<result <<endl;
+    return 0;
+
+}
+
